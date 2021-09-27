@@ -30,7 +30,7 @@ a {
 
 .box__wrapper {
   width: 800px;
-  height: 400px;
+  height: 450px;
   overflow: hidden;
 }
 .box__wrapper .box {
@@ -46,10 +46,17 @@ a {
 }
 .box__wrapper .box .graphic {
   align-self: center;
+  position: relative;
 }
 .box__wrapper .box .graphic img {
   max-width: 400px;
   transform: translateX(-50px);
+}
+.box__wrapper .box .graphic .pattern {
+  position: absolute;
+  top: -30%;
+  right: 60%;
+  transform: scale(1.8);
 }
 .box__wrapper .box .content {
   padding: 30px 60px;
@@ -80,6 +87,12 @@ body {
   .box__wrapper .box .graphic img {
     max-width: 250px;
     transform: translateX(-20px) translateY(-100px);
+  }
+  .box__wrapper .box .graphic .pattern {
+    position: absolute;
+    top: -65%;
+    right: 6%;
+    transform: scale(1);
   }
   .box__wrapper .box .content {
     margin: 0;

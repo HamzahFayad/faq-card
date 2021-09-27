@@ -41,7 +41,7 @@ a {
 
 .box__wrapper {
   width: 800px;
-  height: 400px;
+  height: 450px;
   overflow: hidden;
   .box {
     background: #fff;
@@ -55,9 +55,16 @@ a {
     grid-column-gap: 12px;
     .graphic {
       align-self: center;
+      position: relative;
       img {
         max-width: 400px;
         transform: translateX(-50px);
+      }
+      .pattern {
+        position: absolute;
+        top: -30%;
+        right: 60%;
+        transform: scale(1.8);
       }
     }
     .content {
@@ -87,6 +94,12 @@ a {
         img {
           max-width: 250px;
           transform: translateX(-20px) translateY(-100px);
+        }
+        .pattern {
+          position: absolute;
+          top: -65%;
+          right: 6%;
+          transform: scale(1);
         }
       }
       .content {
