@@ -28,6 +28,12 @@ a {
   text-decoration: none;
 }
 
+.box__img {
+  position: absolute;
+  transform: translate(-60%, 180%);
+  z-index: 20;
+}
+
 .box__wrapper {
   width: 800px;
   height: 450px;
@@ -70,6 +76,10 @@ body {
     overflow-x: visible;
   }
 
+  .box__img {
+    transform: translate(-4%, -28%) scale(0.5);
+  }
+
   .box__wrapper {
     width: 380px;
     height: 600px;
@@ -86,13 +96,11 @@ body {
   }
   .box__wrapper .box .graphic img {
     max-width: 250px;
-    transform: translateX(-20px) translateY(-100px);
+    transform: translateX(-20px) translateY(-120px);
   }
   .box__wrapper .box .graphic .pattern {
-    position: absolute;
     top: -65%;
     right: 6%;
-    transform: scale(1);
   }
   .box__wrapper .box .content {
     margin: 0;
