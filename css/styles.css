@@ -99,8 +99,9 @@ body {
     transform: translateX(-20px) translateY(-120px);
   }
   .box__wrapper .box .graphic .pattern {
-    top: -65%;
+    top: -75%;
     right: 6%;
+    transform: scale(1);
   }
   .box__wrapper .box .content {
     margin: 0;
