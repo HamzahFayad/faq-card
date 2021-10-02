@@ -40,7 +40,7 @@ a {
 }
 .box__img {
   position: absolute;
-  transform: translate(-60%, 180%);
+  transform: translate(-60%, 100%);
   z-index: 20;
 }
 .box__wrapper {
@@ -74,8 +74,68 @@ a {
     .content {
       padding: 30px 60px;
       color: $text_blue;
+      .faq__wrapper {
+        .question {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-around;
+          align-items: center;
+          cursor: pointer;
+          user-select: none;
+          .arrow {
+            width: 14px;
+            height: 10px;
+          }
+        }
+        .answer {
+          pointer-events: none;
+          padding: 0 4.5px;
+          //position: absolute;
+          opacity: 0;
+          transform: translateY(-10px);
+          .answ {
+            text-align: left;
+            max-width: 250px;
+          }
+        }
+      }
     }
   }
+}
+hr {
+  padding: 6px 0;
+}
+@keyframes openAnswer {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+}
+@keyframes closeAnswer {
+  0% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+.openedQ {
+  font-weight: 600;
+}
+.openedA {
+  animation: openAnswer 400ms ease-out forwards;
+}
+.closedA {
+  animation: closedAnswer 400ms ease-in forwards;
+}
+.openedIcon {
+  transform: rotate(180deg);
 }
 
 @media only screen and (max-width: 900px) {
@@ -85,7 +145,7 @@ a {
     overflow-x: visible;
   }
   .box__img {
-    transform: translate(-4%, -28%) scale(0.5);
+    transform: translate(-5%, -50%) scale(0.5);
   }
   .box__wrapper {
     width: 380px;
